@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.santanu.entity.Contact;
+import com.santanu.entity.ContactEntity;
 
-public interface Contact_Repository extends JpaRepository<Contact, Serializable> {
+public interface ContactRepository extends JpaRepository<ContactEntity, Serializable> {
 
 }

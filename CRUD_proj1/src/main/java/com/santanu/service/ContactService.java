@@ -2,13 +2,17 @@ package com.santanu.service;
 
 import java.util.List;
 
-import com.santanu.entity.Contact;
+import com.santanu.dto.ContactDTO;
 
 public interface ContactService {
 	
-	boolean saveContact(Contact c);
-	List<Contact> getAllContacts( );
-	Contact getContactById(Integer cid);
-	boolean updateContact(Contact c);
+	boolean saveContact(ContactDTO contactDTO);
+	
+	List<ContactDTO> getAllContacts( );
+	
+	ContactDTO getContactById(Integer cid);
+	
+	//boolean updateContact(ContactDTO contactDTO);
+	
 	boolean deleteContact(Integer cid);
 }
