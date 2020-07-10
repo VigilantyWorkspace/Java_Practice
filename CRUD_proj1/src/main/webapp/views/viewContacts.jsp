@@ -87,7 +87,7 @@
 						<td>
 							<a class="btn btn-warning" href="editContact?contactId=${contactDetailsList.contactId}">EDIT</a>
 						|
-							<a class="btn btn-danger" href="deleteContact?contactId=${contactDetailsList.contactId}" onclick="confirmDelete()">DELETE</a>
+							<a class="btn btn-danger" href="deleteContact?contactId=${contactDetailsList.contactId}" onclick="return confirmDelete()">DELETE</a>
 						</td>
 					</tr>
 				</c:forEach>

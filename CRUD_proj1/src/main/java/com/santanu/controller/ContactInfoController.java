@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.santanu.dto.ContactDTO;
 import com.santanu.service.ContactService;
@@ -31,16 +32,16 @@ public class ContactInfoController {
 	}
 	
 	@PostMapping(value = "/storeContact")
-	public String handleSubmitBtn(@ModelAttribute("contact")ContactDTO contactDTO, Model model) {
+	public String handleSubmitBtn(@ModelAttribute("contact")ContactDTO contactDTO, RedirectAttributes attributes) {
 		
 		boolean isSaved = contactService.saveContact(contactDTO);
 		if(isSaved) {
-			model.addAttribute("successMsg", "Contact Saved Successfully");
+			attributes.addFlashAttribute("successMsg", "Contact Saved Successfully");
 		}else {
-			model.addAttribute("errorMsg", "Contact Saving Failed");
+			attributes.addFlashAttribute("errorMsg", "Contact Saving Failed");
 		}
 		
-		return "contactInfo";
+		return "redirect:/addContact";
 	}
 	
 	

@@ -15,6 +15,7 @@
 	<script src="resources/js/jquery-3.4.1.slim.min.js"></script>
 	<script src="resources/js/popper.min.js"></script>
 	<script src="resources/js/bootstrap.min.js"></script>
+	
 
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -64,7 +65,7 @@
 						</div>
 
 						<div class="col-4">
-							<form:input path="contactName" />
+							<form:input path="contactName"/>
 						</div>
 						<div class="col-4">
 							<!-- Error Message -->
