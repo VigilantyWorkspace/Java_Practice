@@ -12,7 +12,7 @@ public interface ContactService {
 	
 	ContactDTO getContactById(Integer cid);
 	
-	//boolean updateContact(ContactDTO contactDTO);
+	
 	
 	boolean deleteContact(Integer cid);
 }

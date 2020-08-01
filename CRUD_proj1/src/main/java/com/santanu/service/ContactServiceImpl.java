@@ -23,12 +23,7 @@ public class ContactServiceImpl implements ContactService {
 	public boolean saveContact(ContactDTO contactDTO) {
 		ContactEntity contactEntity = new ContactEntity();
 		
-		//For Update in the Same Form using the hidden field as contactid of the ContactDTo obj
-		/*
-		 * if(contactDTO.getContactId() !=null) { Optional<ContactEntity> contactById =
-		 * contactRepo.findById(contactDTO.getContactId()); contactEntity =
-		 * contactById.get(); }
-		 */
+		
 		
 		BeanUtils.copyProperties(contactDTO, contactEntity);
 		ContactEntity savedContactEntity = contactRepo.save(contactEntity);
